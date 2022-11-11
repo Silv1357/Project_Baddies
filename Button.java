@@ -143,23 +143,178 @@ public class Button extends JButton implements ActionListener{
   @Override
   public void actionPerformed(ActionEvent e){
     JButton userClicked = (JButton) e.getSource();
+    Scanner console = new Scanner(System.in);
     // System.out.println(userClicked);
     if(userClicked == sports) {
       // print something
       System.out.println("enter 1 or 2");
-      // Scanner
-      Scanner console = new Scanner(System.in);
       // take scanner input
       if(console.next().equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
-        System.exit(); //how do we get it to exit the if statement without closing game??
+       //how do we get it to exit the if statement without closing game??
 
       } else {
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
-        System.exit();
       }
+      console.close();
+    }
+    if(userClicked == languageHouses){
+      System.out.println("enter 1 or 2");
+      if(console.next().equals("1")){
+        healthScore += 0;
+        System.out.println("Your health is now: " + healthScore);
+       //how do we get it to exit the if statement without closing game??
+
+      } else {
+        healthScore -= 20;
+        System.out.println("Your health is now: " + healthScore);
+      }
+      console.close();
+    }
+    if(userClicked == westCampus){
+      System.out.println("enter 1 or 2");
+      if(console.next().equals("1")){
+        healthScore += 0;
+        System.out.println("Your health is now: " + healthScore);
+       //how do we get it to exit the if statement without closing game??
+
+      } else {
+        healthScore -= 20;
+        System.out.println("Your health is now: " + healthScore);
+      }
+      console.close();
+    }
+    if(userClicked == worner){
+      System.out.println("enter 1 or 2");
+      if(console.next().equals("1")){
+        healthScore += 0;
+        System.out.println("Your health is now: " + healthScore);
+       //how do we get it to exit the if statement without closing game??
+
+      } else {
+        healthScore -= 20;
+        System.out.println("Your health is now: " + healthScore);
+      }
+      console.close();
+    }
+    if(userClicked == musicAndTheatre){
+      System.out.println("enter 1 or 2");
+      if(console.next().equals("1")){
+        healthScore += 0;
+        System.out.println("Your health is now: " + healthScore);
+       //how do we get it to exit the if statement without closing game??
+
+      } else {
+        healthScore -= 20;
+        System.out.println("Your health is now: " + healthScore);
+      }
+      console.close();
+    }
+    if(userClicked == tuttLibrary){
+      System.out.println("enter 1 or 2");
+      if(console.next().equals("1")){
+        healthScore += 0;
+        System.out.println("Your health is now: " + healthScore);
+       //how do we get it to exit the if statement without closing game??
+
+      } else {
+        healthScore -= 20;
+        System.out.println("Your health is now: " + healthScore);
+      }
+      console.close();
+    }
+    if(userClicked == armstrong){
+      System.out.println("enter 1 or 2");
+      if(console.next().equals("1")){
+        healthScore += 0;
+        System.out.println("Your health is now: " + healthScore);
+       //how do we get it to exit the if statement without closing game??
+
+      } else {
+        healthScore -= 20;
+        System.out.println("Your health is now: " + healthScore);
+      }
+      console.close();
+    }
+    if(userClicked == southHall){
+      System.out.println("enter 1 or 2");
+      if(console.next().equals("1")){
+        healthScore += 0;
+        System.out.println("Your health is now: " + healthScore);
+       //how do we get it to exit the if statement without closing game??
+
+      } else {
+        healthScore -= 20;
+        System.out.println("Your health is now: " + healthScore);
+      }
+      console.close();
+    }
+    if(userClicked == edRobson){
+      System.out.println("enter 1 or 2");
+      if(console.next().equals("1")){
+        healthScore += 0;
+        System.out.println("Your health is now: " + healthScore);
+       //how do we get it to exit the if statement without closing game??
+
+      } else {
+        healthScore -= 20;
+        System.out.println("Your health is now: " + healthScore);
+      }
+      console.close();
+    }
+    if(userClicked == shove){
+      System.out.println("enter 1 or 2");
+      if(console.next().equals("1")){
+        healthScore += 0;
+        System.out.println("Your health is now: " + healthScore);
+       //how do we get it to exit the if statement without closing game??
+
+      } else {
+        healthScore -= 20;
+        System.out.println("Your health is now: " + healthScore);
+      }
+      console.close();
+    }
+    if(userClicked == classes){
+      System.out.println("enter 1 or 2");
+      if(console.next().equals("1")){
+        healthScore += 0;
+        System.out.println("Your health is now: " + healthScore);
+       //how do we get it to exit the if statement without closing game??
+
+      } else {
+        healthScore -= 20;
+        System.out.println("Your health is now: " + healthScore);
+      }
+      console.close();
+    }
+    if(userClicked == mathias){
+      System.out.println("enter 1 or 2");
+      if(console.next().equals("1")){
+        healthScore += 0;
+        System.out.println("Your health is now: " + healthScore);
+       //how do we get it to exit the if statement without closing game??
+
+      } else {
+        healthScore -= 20;
+        System.out.println("Your health is now: " + healthScore);
+      }
+      console.close();
+    }
+    if(userClicked == eastCampus){
+      System.out.println("enter 1 or 2");
+      if(console.next().equals("1")){
+        healthScore += 0;
+        System.out.println("Your health is now: " + healthScore);
+       //how do we get it to exit the if statement without closing game??
+
+      } else {
+        healthScore -= 20;
+        System.out.println("Your health is now: " + healthScore);
+      }
+      console.close();
     }
   }
 }
