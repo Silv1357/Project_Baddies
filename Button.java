@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 public class Button extends JButton implements ActionListener{
   JButton sports, languageHouses, westCampus, worner, musicAndTheatre, tuttLibrary, armstrong, southHall, edRobson, shove, classes, mathias, eastCampus;
   int healthScore = 100;
+  JLabel healthDisplay;
 
   public void button(){
     // create a JFrame
@@ -27,6 +28,10 @@ public class Button extends JButton implements ActionListener{
 
     a.add(label); // add label (image) to frame
     a.setVisible (true);
+
+    healthDisplay = new JLabel(String.valueOf(healthScore));
+    healthDisplay.setBounds(8, 5, 75, 25);
+    a.add(healthDisplay);
 
     // Athletics and Sports Button
     sports = new JButton ("Sports");
@@ -143,26 +148,27 @@ public class Button extends JButton implements ActionListener{
   @Override
   public void actionPerformed(ActionEvent e){
     JButton userClicked = (JButton) e.getSource();
-    Scanner console = new Scanner(System.in);
+    //Scanner console = new Scanner(System.in);
     // System.out.println(userClicked);
+    String meow = JOptionPane.showInputDialog("Enter 1 or 2:");
+
     if(userClicked == sports) {
       // print something
       System.out.println("enter 1 or 2");
       // take scanner input
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
-
       } else {
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
+      //console.close();
     }
     if(userClicked == languageHouses){
       System.out.println("enter 1 or 2");
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
@@ -171,11 +177,11 @@ public class Button extends JButton implements ActionListener{
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
+      //console.close();
     }
     if(userClicked == westCampus){
       System.out.println("enter 1 or 2");
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
@@ -184,11 +190,11 @@ public class Button extends JButton implements ActionListener{
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
+      //console.close();
     }
     if(userClicked == worner){
       System.out.println("enter 1 or 2");
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
@@ -197,11 +203,11 @@ public class Button extends JButton implements ActionListener{
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
+      //console.close();
     }
     if(userClicked == musicAndTheatre){
       System.out.println("enter 1 or 2");
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
@@ -210,11 +216,11 @@ public class Button extends JButton implements ActionListener{
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
+      //console.close();
     }
     if(userClicked == tuttLibrary){
       System.out.println("enter 1 or 2");
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
@@ -223,11 +229,11 @@ public class Button extends JButton implements ActionListener{
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
+      //console.close();
     }
     if(userClicked == armstrong){
       System.out.println("enter 1 or 2");
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
@@ -236,11 +242,11 @@ public class Button extends JButton implements ActionListener{
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
+      //console.close();
     }
     if(userClicked == southHall){
       System.out.println("enter 1 or 2");
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
@@ -249,11 +255,11 @@ public class Button extends JButton implements ActionListener{
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
+      //console.close();
     }
     if(userClicked == edRobson){
       System.out.println("enter 1 or 2");
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
@@ -262,11 +268,11 @@ public class Button extends JButton implements ActionListener{
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
+      //console.close();
     }
     if(userClicked == shove){
       System.out.println("enter 1 or 2");
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
@@ -275,11 +281,11 @@ public class Button extends JButton implements ActionListener{
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
+      //console.close();
     }
     if(userClicked == classes){
       System.out.println("enter 1 or 2");
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
@@ -288,11 +294,10 @@ public class Button extends JButton implements ActionListener{
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
     }
     if(userClicked == mathias){
       System.out.println("enter 1 or 2");
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
@@ -301,11 +306,10 @@ public class Button extends JButton implements ActionListener{
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
     }
     if(userClicked == eastCampus){
       System.out.println("enter 1 or 2");
-      if(console.next().equals("1")){
+      if(meow.equals("1")){
         healthScore += 0;
         System.out.println("Your health is now: " + healthScore);
        //how do we get it to exit the if statement without closing game??
@@ -314,7 +318,7 @@ public class Button extends JButton implements ActionListener{
         healthScore -= 20;
         System.out.println("Your health is now: " + healthScore);
       }
-      console.close();
     }
+    healthDisplay.setText(String.valueOf(healthScore));
+    //console.close();
   }
-}
