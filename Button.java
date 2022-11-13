@@ -15,6 +15,10 @@ public class Button extends JButton implements ActionListener{
     JFrame a = new JFrame();
     a.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
     a.setSize (800, 500); // sets size of frame
+    //health display will be here so it prints on top of the image
+    healthDisplay = new JLabel(String.valueOf(healthScore));
+    healthDisplay.setBounds(8, 5, 75, 25);
+    a.add(healthDisplay);
 
     // scale image
     final ImageIcon originalImage = new ImageIcon ("map2.jpeg");
@@ -28,10 +32,6 @@ public class Button extends JButton implements ActionListener{
 
     a.add(label); // add label (image) to frame
     a.setVisible (true);
-
-    healthDisplay = new JLabel(String.valueOf(healthScore));
-    healthDisplay.setBounds(8, 5, 75, 25);
-    a.add(healthDisplay);
 
     // Athletics and Sports Button
     sports = new JButton ("Sports");
@@ -147,178 +147,172 @@ public class Button extends JButton implements ActionListener{
 
   @Override
   public void actionPerformed(ActionEvent e){
+    healthDisplay.setText("Health: " + String.valueOf(healthScore));
     JButton userClicked = (JButton) e.getSource();
-    //Scanner console = new Scanner(System.in);
-    // System.out.println(userClicked);
-    String meow = JOptionPane.showInputDialog("Enter 1 or 2:");
-
     if(userClicked == sports) {
+      String sp = JOptionPane.showInputDialog("1. Run as fast as you can (runner track-star type run) or \n2. Play soccer with the cute (but rabid) squirrels \nEnter 1 or 2");
       // print something
-      System.out.println("enter 1 or 2");
       // take scanner input
-      if(meow.equals("1")){
+      if(sp.equals("1")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
+        //print the clue here
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 1", JOptionPane.PLAIN_MESSAGE); //change "testing purposes to the clues"
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
-      //console.close();
     }
     if(userClicked == languageHouses){
-      System.out.println("enter 1 or 2");
-      if(meow.equals("1")){
+      String lh = JOptionPane.showInputDialog("1. Let the squirrels teach you squirrel-talk, yesss! or \n2. No thanks, I can go without learning \nEnter 1 or 2");
+      if(lh.equals("2")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
-
+        //print the clue here
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 2", JOptionPane.PLAIN_MESSAGE); //this will dsplay the message but removes the health score
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
-      //console.close();
     }
     if(userClicked == westCampus){
-      System.out.println("enter 1 or 2");
-      if(meow.equals("1")){
+      String wc = JOptionPane.showInputDialog("1. Give the squirrels a tour of lovely Loomis  or \n2. The squirrels can get lost \nEnter 1 or 2");
+      if(wc.equals("2")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
-
+        //print clue here
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 3", JOptionPane.PLAIN_MESSAGE);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
-      //console.close();
     }
     if(userClicked == worner){
-      System.out.println("enter 1 or 2");
-      if(meow.equals("1")){
+      String wo = JOptionPane.showInputDialog("1. Sorry, but I was told to NOT feed the squirrels or \n2. Aww feed them some tasty rasties!! \nEnter 1 or 2");
+      if(wo.equals("1")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
-
+        //print clue here
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 4", JOptionPane.PLAIN_MESSAGE);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
-      //console.close();
     }
     if(userClicked == musicAndTheatre){
-      System.out.println("enter 1 or 2");
-      if(meow.equals("1")){
+      String mth = JOptionPane.showInputDialog("1. Show off my amazing theatre skills to these squirrels or \n2. Lock them up backstage \nEnter 1 or 2");
+      if(mth.equals("2")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
-
+        //print clue here
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 5", JOptionPane.PLAIN_MESSAGE);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
-      //console.close();
     }
     if(userClicked == tuttLibrary){
-      System.out.println("enter 1 or 2");
-      if(meow.equals("1")){
+      String ttl = JOptionPane.showInputDialog("1. Reading can wait to be honest or \n2. Storytime with the squrrels!!! \nEnter 1 or 2");
+      if(ttl.equals("1")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
-
+        //print clue here
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 6", JOptionPane.PLAIN_MESSAGE);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
-      //console.close();
     }
     if(userClicked == armstrong){
-      System.out.println("enter 1 or 2");
-      if(meow.equals("1")){
+      String arm = JOptionPane.showInputDialog("1. I don't even like armstrong, easy pass or \n2. Quick armstrong tour sounds fun \nEnter 1 or 2");
+      if(arm.equals("1")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
-
+        //print clue here
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 7", JOptionPane.PLAIN_MESSAGE);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
-      //console.close();
     }
     if(userClicked == southHall){
-      System.out.println("enter 1 or 2");
-      if(meow.equals("1")){
+      String sh = JOptionPane.showInputDialog("1. Play a quick volleyball game with them in the South court!  or \n2. No time to lose now, even though South is really nice \nEnter 1 or 2");
+      if(sh.equals("2")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
-
+        //print clue here
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 8", JOptionPane.PLAIN_MESSAGE);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
-      //console.close();
     }
     if(userClicked == edRobson){
-      System.out.println("enter 1 or 2");
-      if(meow.equals("1")){
+      String ed = JOptionPane.showInputDialog("1. I'll just watch the next game  or \n2. Take the squirrels to the game!  \nEnter 1 or 2");
+      if(ed.equals("1")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
-
+        //print clue here
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 9", JOptionPane.PLAIN_MESSAGE);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
-      //console.close();
     }
     if(userClicked == shove){
-      System.out.println("enter 1 or 2");
-      if(meow.equals("1")){
+      String shv = JOptionPane.showInputDialog("1. Moment of meditation with the squirrels. That might cure them, no?  or \n2. I choose my own peace away from them, byeee! \nEnter 1 or 2");
+      if(shv.equals("2")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
-
+        //print clue here
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 10", JOptionPane.PLAIN_MESSAGE);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
-      //console.close();
     }
     if(userClicked == classes){
-      System.out.println("enter 1 or 2");
-      if(meow.equals("1")){
+      String cls = JOptionPane.showInputDialog("1. Take them to class with me as my pet? or \n2. I can afford to skip class just today \nEnter 1 or 2");
+      if(cls.equals("2")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
-
+        //print clue here
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 11", JOptionPane.PLAIN_MESSAGE);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
     }
-    if(userClicked == mathias){
-      System.out.println("enter 1 or 2");
-      if(meow.equals("1")){
+    if(userClicked == mathias){ //edit this since we said the elixir will be here
+      String math = JOptionPane.showInputDialog("1. I saw we all stop for snacks at the C-Store or \n2. I have to sneak in the c-store without them! \nEnter 1 or 2");
+      if(math.equals("2")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
-
+        //print message of elixir found here
+        JOptionPane.showMessageDialog(null, "You have found the elixir! It was hidden in the C-store shelf!", "ELIXIR FOUND", JOptionPane.PLAIN_MESSAGE);
+        //maybe do a final question in order to be able to buy the elixir??
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
     }
     if(userClicked == eastCampus){
-      System.out.println("enter 1 or 2");
-      if(meow.equals("1")){
+      String ec = JOptionPane.showInputDialog("1. Keep running, the nice apartments will still be there later or \n2. Party with them outside the apartments! \nEnter 1 or 2");
+      if(ec.equals("1")){
         healthScore += 0;
-        System.out.println("Your health is now: " + healthScore);
-       //how do we get it to exit the if statement without closing game??
-
+        //print clue here
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 12", JOptionPane.PLAIN_MESSAGE);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
-        System.out.println("Your health is now: " + healthScore);
+        healthDisplay.setText("Health: " + String.valueOf(healthScore));
       }
     }
-    healthDisplay.setText(String.valueOf(healthScore));
-    //console.close();
+    if(healthScore == 0){ 
+      JOptionPane.showMessageDialog(null, "Uh oh, you got squirrel rabies; better luck next time!", "No Health", JOptionPane.PLAIN_MESSAGE);
+      System.exit(0);
+    }
+    healthDisplay.setText("Health: " + String.valueOf(healthScore));
+    //how do we get word health to pop up from the start
   }
+}
