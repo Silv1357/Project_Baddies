@@ -1,7 +1,8 @@
 //for our Game class
-// runs Player and Map class
+// runs Player class
 
 import java.util.*;
+
 
 public class Game{
 
@@ -10,7 +11,7 @@ private int healthScore;
 
   public static void main(String[] args){
 
-    System.out.println( "Nick: Welcome to Colorado College; unfortunately, you have come at a really bad time. \n Squirrels are attacking everyone and they all have rabies. We need the special elixir to cure CC. \n I need to find my special elixir or the world is doomed; \n it is somewhere on campus and you're going to have to help me \n What is your name?\n");
+    System.out.println( "Nick: Welcome to Colorado College; unfortunately, you have come at a really bad time. \nSquirrels are attacking everyone and they all have rabies. We need the special elixir to cure CC. \nI need to find my special elixir or the world is doomed; \nIt is somewhere on campus and you're going to have to help me \nFirst, what is your name?\n");
 
     System.out.println("Enter your name: ");
     Scanner userInput = new Scanner(System.in);
