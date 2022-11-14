@@ -8,6 +8,7 @@ public class Button extends JButton implements ActionListener{
   JButton sports, languageHouses, westCampus, worner, musicAndTheatre, tuttLibrary, armstrong, southHall, edRobson, shove, classes, mathias, eastCampus;
   int healthScore = 100;
   JLabel healthDisplay;
+  RabidSquirrel mathySquirrel = new RabidSquirrel();
 
   public void button(){
     // create a JFrame
@@ -148,6 +149,7 @@ public class Button extends JButton implements ActionListener{
 
   @Override
   public void actionPerformed(ActionEvent e){
+    mathySquirrel.setAction("jumps towards your face");
     healthDisplay.setText("Health: " + String.valueOf(healthScore));
     JButton userClicked = (JButton) e.getSource();
     if(userClicked == sports) {
@@ -301,9 +303,20 @@ public class Button extends JButton implements ActionListener{
       if(math.equals("2")){
         healthScore += 0;
         //print message of elixir found here
-        JOptionPane.showMessageDialog(null, "You have found the elixir! It was hidden in the C-store shelf!", "ELIXIR FOUND", JOptionPane.PLAIN_MESSAGE);
-        //maybe do a final question in order to be able to buy the elixir??
+        JOptionPane.showMessageDialog(null, "The elixir is in the C-Store!! Defeat the last rabid squirrel to get it!", "ELIXIR FOUND", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
+        String math2 = JOptionPane.showInputDialog("The last extreme, rabid squirrel " + mathySquirrel.getAction() +  "\n1. I'm so scared I cannot move or \n2. Grab the tree branch and hit it away! \nEnter 1 or 2");
+        if(math2.equals("2")){
+          healthScore += 0;
+          JOptionPane.showMessageDialog(null, "You got the elixir and saved CC!! Congrats!", "ELIXIR OBTAINED", JOptionPane.PLAIN_MESSAGE);
+          healthDisplay.setText("Health: " + String.valueOf(healthScore));
+        }
+        else{
+          JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
+          healthScore -= 20;
+          healthDisplay.setText("Health: " + String.valueOf(healthScore));
+        }
+        //maybe do a final question in order to be able to buy the elixir??
       } else {
         JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
         healthScore -= 20;
