@@ -156,7 +156,7 @@ public class Button extends JButton implements ActionListener{
       if(sp.equals("1")){
         healthScore += 0;
         //print the clue here
-        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 1", JOptionPane.PLAIN_MESSAGE); //change "testing purposes to the clues"
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue", JOptionPane.PLAIN_MESSAGE); //change "testing purposes to the clues"
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
@@ -168,7 +168,7 @@ public class Button extends JButton implements ActionListener{
       if(lh.equals("2")){
         healthScore += 0;
         //print the clue here
-        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 2", JOptionPane.PLAIN_MESSAGE); //this will dsplay the message but removes the health score
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue", JOptionPane.PLAIN_MESSAGE); //this will dsplay the message but removes the health score
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
@@ -180,7 +180,7 @@ public class Button extends JButton implements ActionListener{
       if(wc.equals("2")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 3", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
@@ -192,7 +192,7 @@ public class Button extends JButton implements ActionListener{
       if(wo.equals("1")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 4", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
@@ -204,7 +204,7 @@ public class Button extends JButton implements ActionListener{
       if(mth.equals("2")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 5", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
@@ -216,7 +216,7 @@ public class Button extends JButton implements ActionListener{
       if(ttl.equals("1")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 6", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
@@ -228,7 +228,7 @@ public class Button extends JButton implements ActionListener{
       if(arm.equals("1")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 7", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
@@ -240,7 +240,7 @@ public class Button extends JButton implements ActionListener{
       if(sh.equals("2")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 8", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
@@ -252,7 +252,7 @@ public class Button extends JButton implements ActionListener{
       if(ed.equals("1")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 9", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
@@ -264,7 +264,7 @@ public class Button extends JButton implements ActionListener{
       if(shv.equals("2")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 10", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
@@ -276,7 +276,7 @@ public class Button extends JButton implements ActionListener{
       if(cls.equals("2")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue 11", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Testing purposes", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
