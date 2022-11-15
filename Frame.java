@@ -86,6 +86,6 @@ public class Frame extends JButton implements ActionListener {
 
       String message1 = JOptionPane.showInputDialog(list.toString().replace ("[", "").replace(",", "").replace("]", "").replace(".",".\n").replace("?", "?\n\n"));
 
-      JOptionPane.showMessageDialog(b,"Welcome, " + message1 +". \nYou have to go around campus, visiting the different locations. \nIn each, you will be faced with 2 choices. \nIf you make the right choice, you will get a clue to find the elixir. \nBut if you make the wrong choice, you will be attacked by a squirrel and get -20 health; \n5 wrong choices will kill you");
+      JOptionPane.showMessageDialog(b, "Welcome, " + message1 +". \nIn this game, you will walk around visiting different parts of Colorado College, \nYou will be faced with 2 options at each location: \nIf you choose correctly you get a clue to find the elixir \nbut if you choose the wrong option, the rabid squirrels will attack you and deduct 20 health from you \nFind the elixir before your health gets to 0 to save CC!");
   }
 }
