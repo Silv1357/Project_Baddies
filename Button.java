@@ -1,14 +1,31 @@
+
+
 import java.util.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+//this button class serves to create the buttons on the map as well as get the button the user clicked on and based on the button
+//it will print a window with 2 options from which the player must choose from and based on that they will either get a window wiht a clue or get health deducted
+
 public class Button extends JButton implements ActionListener{
   JButton sports, languageHouses, westCampus, worner, musicAndTheatre, tuttLibrary, armstrong, southHall, edRobson, shove, classes, mathias, eastCampus;
-  int healthScore = 100;
-  JLabel healthDisplay;
-  RabidSquirrel mathySquirrel = new RabidSquirrel();
+  int healthScore = 100; //health of the player will start at 0
+  JLabel healthDisplay; //we want the heakth to be displayed at all times
+  RabidSquirrel mathySquirrel = new RabidSquirrel(); //we are creating different squirrels for each location and assigning them actions
+  RabidSquirrel wornerSquirrel = new RabidSquirrel();
+  RabidSquirrel sportsSquirrel = new RabidSquirrel();
+  RabidSquirrel languageHousesSquirrel = new RabidSquirrel();
+  RabidSquirrel westCampusSquirrel = new RabidSquirrel();
+  RabidSquirrel musicAndTheatreSquirrel = new RabidSquirrel();
+  RabidSquirrel tuttLibrarySquirrel = new RabidSquirrel();
+  RabidSquirrel armstrongSquirrel = new RabidSquirrel();
+  RabidSquirrel southHallSquirrel = new RabidSquirrel();
+  RabidSquirrel edRobsonSquirrel = new RabidSquirrel();
+  RabidSquirrel shoveSquirrel = new RabidSquirrel();
+  RabidSquirrel classesSquirrel = new RabidSquirrel();
+  RabidSquirrel eastCampusSquirrel = new RabidSquirrel();
 
   public void button(){
     // create a JFrame
@@ -150,17 +167,29 @@ public class Button extends JButton implements ActionListener{
   // method for when buttons are clicked
   @Override
   public void actionPerformed(ActionEvent e){
-    mathySquirrel.setAction("jumps towards your face");
+    mathySquirrel.setAction("jumps towards your face"); //assigning actions to the different squirrels
+    wornerSquirrel.setAction("looks violently hungry");
+    sportsSquirrel.setAction("sprints towards you");
+    languageHousesSquirrel.setAction("look threatening");
+    westCampusSquirrel.setAction("want to go into loomis");
+    musicAndTheatreSquirrel.setAction("are acting crazy");
+    tuttLibrarySquirrel.setAction("tearing books apart");
+    armstrongSquirrel.setAction("are peaking at the armstrong windows");
+    southHallSquirrel.setAction("are taking over the volleyball court");
+    edRobsonSquirrel.setAction("are throwing hockey pucks at you");
+    shoveSquirrel.setAction("look like they need some help");
+    classesSquirrel.setAction("look interested in you (weird)");
+    eastCampusSquirrel.setAction("are trying to take over hybl");
     healthDisplay.setText("Health: " + String.valueOf(healthScore));
     JButton userClicked = (JButton) e.getSource();
-
+ //the if statements allow us to track what button was clicked and what shoud happen next 
     if(userClicked == sports) {
-      String sp = JOptionPane.showInputDialog("1. Run as fast as you can (runner track-star type run) or \n2. Play soccer with the cute (but rabid) squirrels \nEnter 1 or 2");
+      String sp = JOptionPane.showInputDialog("A rabid squirrel " + sportsSquirrel.getAction() + "\n1. Run as fast as you can (runner track-star type run) or \n2. Play soccer with the cute (but rabid) squirrels \nEnter 1 or 2");
       // take scanner input
       if(sp.equals("1")){
         healthScore += 0;
         // print the clue here
-        JOptionPane.showMessageDialog(null, "There is a recently abandoned guitar on the track; maybe I should head to the theater department.", "Clue 1", JOptionPane.PLAIN_MESSAGE); //change "testing purposes to the clues"
+        JOptionPane.showMessageDialog(null, "There is a recently abandoned guitar on the track; maybe I should head to the theater department.", "Clue", JOptionPane.PLAIN_MESSAGE); //change "testing purposes to the clues"
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
@@ -170,11 +199,11 @@ public class Button extends JButton implements ActionListener{
     }
 
     if(userClicked == languageHouses){
-      String lh = JOptionPane.showInputDialog("1. Let the squirrels teach you squirrel-talk, yesss! or \n2. No thanks, I can go without learning \nEnter 1 or 2");
+      String lh = JOptionPane.showInputDialog("The squirrels " + languageHousesSquirrel.getAction() + "\n1. Let the squirrels teach you squirrel-talk, yesss! or \n2. No thanks, I can go without learning \nEnter 1 or 2");
       if(lh.equals("2")){
         healthScore += 0;
         // print the clue here
-        JOptionPane.showMessageDialog(null, "Found an abandoned gold card; it belonged to a former student athlete.", "Clue 2", JOptionPane.PLAIN_MESSAGE); //this will dsplay the message but removes the health score
+        JOptionPane.showMessageDialog(null, "Found an abandoned gold card; it belonged to a former student athlete.", "Clue", JOptionPane.PLAIN_MESSAGE); //this will dsplay the message but removes the health score
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
@@ -184,11 +213,11 @@ public class Button extends JButton implements ActionListener{
     }
 
     if(userClicked == westCampus){
-      String wc = JOptionPane.showInputDialog("1. Give the squirrels a tour of lovely Loomis  or \n2. The squirrels can get lost \nEnter 1 or 2");
+      String wc = JOptionPane.showInputDialog("The zombie-looking squirrels " + westCampusSquirrel.getAction() + "\n1. Give the squirrels a tour of lovely Loomis  or \n2. The squirrels can get lost \nEnter 1 or 2");
       if(wc.equals("2")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "The squirrels seem nicer at the language houses.", "Clue 3", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "The squirrels seem nicer at the language houses.", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
@@ -198,11 +227,11 @@ public class Button extends JButton implements ActionListener{
     }
 
     if(userClicked == worner){
-      String wo = JOptionPane.showInputDialog("1. Sorry, but I was told to NOT feed the squirrels or \n2. Aww, feed them some tasty rasties!! \nEnter 1 or 2");
+      String wo = JOptionPane.showInputDialog("The squirrel at the entrance looks " + wornerSquirrel.getAction() + "\n1. Sorry, but I was told to NOT feed the squirrels or \n2. Aww, feed them some tasty rasties!! \nEnter 1 or 2");
       if(wo.equals("1")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "The squirrels really like West Campus.", "Clue 4", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "The squirrels really like West Campus.", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
@@ -212,11 +241,11 @@ public class Button extends JButton implements ActionListener{
     }
 
     if(userClicked == musicAndTheatre){
-      String mth = JOptionPane.showInputDialog("1. Show off my amazing theatre skills to these squirrels or \n2. Lock them up backstage \nEnter 1 or 2");
+      String mth = JOptionPane.showInputDialog("The squirrels "  + musicAndTheatreSquirrel.getAction() + "\n1. Show off my amazing theatre skills to these squirrels or \n2. Lock them up backstage \nEnter 1 or 2");
       if(mth.equals("2")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "Someone left an unreturned book on the counter.", "Clue 5", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Someone left an unreturned book on the counter.", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
@@ -226,11 +255,11 @@ public class Button extends JButton implements ActionListener{
     }
 
     if(userClicked == tuttLibrary){
-      String ttl = JOptionPane.showInputDialog("1. Reading can wait to be honest or \n2. Storytime with the squrrels!!! \nEnter 1 or 2");
+      String ttl = JOptionPane.showInputDialog("There are a bunch of rabid squirrels" + tuttLibrarySquirrel.getAction() + "\n1. Reading can wait to be honest or \n2. Storytime with the squrrels!!! \nEnter 1 or 2");
       if(ttl.equals("1")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "There is a poster with \" help \" written on it. Their location is Armstrong.", "Clue 6", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "There is a poster with \" help \" written on it. Their location is Armstrong.", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
@@ -240,11 +269,11 @@ public class Button extends JButton implements ActionListener{
     }
 
     if(userClicked == armstrong){
-      String arm = JOptionPane.showInputDialog("1. I don't even like Armstrong, easy pass or \n2. Quick Armstrong tour sounds fun \nEnter 1 or 2");
+      String arm = JOptionPane.showInputDialog("You are about to enter armstrong but the squirrels " + armstrongSquirrel.getAction() + "\n1. I don't even like Armstrong, easy pass or \n2. Quick Armstrong tour sounds fun \nEnter 1 or 2");
       if(arm.equals("1")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "Nobody is here, but I found another gold card belonging to a South resident.", "Clue 7", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Nobody is here, but I found another gold card belonging to a South resident.", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
@@ -254,11 +283,11 @@ public class Button extends JButton implements ActionListener{
     }
 
     if(userClicked == southHall){
-      String sh = JOptionPane.showInputDialog("1. Play a quick volleyball game with them in the South court!  or \n2. No time to lose now, even though South is really nice \nEnter 1 or 2");
+      String sh = JOptionPane.showInputDialog("Take a peak into south and the squirrels " + southHallSquirrel.getAction() + "\n1. Play a quick volleyball game with them in the South court!  or \n2. No time to lose now, even though South is really nice \nEnter 1 or 2");
       if(sh.equals("2")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "This person was obviously a hockey player.", "Clue 8", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "This person was obviously a hockey player.", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
@@ -268,11 +297,11 @@ public class Button extends JButton implements ActionListener{
     }
 
     if(userClicked == edRobson){
-      String ed = JOptionPane.showInputDialog("1. I'll just watch the next game  or \n2. Take the squirrels to the game!  \nEnter 1 or 2");
+      String ed = JOptionPane.showInputDialog("Oh no, the squirrels " + edRobsonSquirrel.getAction() + "\n1. I'll just watch the next game  or \n2. Take the squirrels to the game!  \nEnter 1 or 2");
       if(ed.equals("1")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "The squirrels couldn't have infilitrated Shove?", "Clue 9", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "The squirrels couldn't have infilitrated Shove?", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
@@ -282,11 +311,11 @@ public class Button extends JButton implements ActionListener{
     }
 
     if(userClicked == shove){
-      String shv = JOptionPane.showInputDialog("1. Moment of meditation with the squirrels. That might cure them, no?  or \n2. I choose my own peace away from them, byeee! \nEnter 1 or 2");
+      String shv = JOptionPane.showInputDialog("These squirrels are crazy, they " + shoveSquirrel.getAction() + "1. Moment of meditation with the squirrels. That might cure them, no?  or \n2. I choose my own peace away from them, byeee! \nEnter 1 or 2");
       if(shv.equals("2")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "Well, that was terrible. I need to check if they also infilitrated the classrooms.", "Clue 10", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Well, that was terrible. I need to check if they also infilitrated the classrooms.", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
@@ -296,11 +325,11 @@ public class Button extends JButton implements ActionListener{
     }
 
     if(userClicked == classes){
-      String cls = JOptionPane.showInputDialog("1. Take them to class with me as my pet? or \n2. I can afford to skip class for just today \nEnter 1 or 2");
+      String cls = JOptionPane.showInputDialog("As you walk to class, the squirrels " + classesSquirrel.getAction() + "\n1. Take them to class with me as my pet? or \n2. I can afford to skip class for just today \nEnter 1 or 2");
       if(cls.equals("2")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "There is another CC ID here and it belongs to an employee. There's only one place left to check.", "Clue 11", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "There is another CC ID here and it belongs to an employee. There's only one place left to check.", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         JOptionPane.showMessageDialog(null, "You were bit by a rabid squirrel, you lost 20 health.", "Oops!", JOptionPane.PLAIN_MESSAGE);
@@ -337,11 +366,11 @@ public class Button extends JButton implements ActionListener{
     }
 
     if(userClicked == eastCampus){
-      String ec = JOptionPane.showInputDialog("1. Keep running, the nice apartments will still be there later or \n2. Party with them outside the apartments! \nEnter 1 or 2");
+      String ec = JOptionPane.showInputDialog("Squirrels " + eastCampusSquirrel.getAction() + "\n1. Keep running, the nice apartments will still be there later or \n2. Party with them outside the apartments! \nEnter 1 or 2");
       if(ec.equals("1")){
         healthScore += 0;
         //print clue here
-        JOptionPane.showMessageDialog(null, "C-Store is the last place this elixir could possible be.", "Clue 12", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "C-Store is the last place this elixir could possible be.", "Clue", JOptionPane.PLAIN_MESSAGE);
         healthDisplay.setText("Health: " + String.valueOf(healthScore));
       } else {
         healthScore -= 20;
