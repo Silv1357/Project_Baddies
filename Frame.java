@@ -77,15 +77,18 @@ public class Frame extends JButton implements ActionListener {
   // method for displaying welcome message and explaining how game is played
   public void welcomeMessage () throws FileNotFoundException {
 
+      // create array list to read and store Welcome.txt
       ArrayList <String> list = new ArrayList <String>();
       Scanner console = new Scanner (new File ("Welcome.txt"));
       while (console.hasNext()){
         String nextWord = console.next();
         list.add (nextWord);
       }
-
+    
+      // format array list string 
       String message1 = JOptionPane.showInputDialog(list.toString().replace ("[", "").replace(",", "").replace("]", "").replace(".",".\n").replace("?", "?\n\n"));
 
+      // directions on how to play game
       JOptionPane.showMessageDialog(b, "Welcome, " + message1 +". \nIn this game, you will walk around visiting different parts of Colorado College, \nYou will be faced with 2 options at each location: \nIf you choose correctly you get a clue to find the elixir \nbut if you choose the wrong option, the rabid squirrels will attack you and deduct 20 health from you \nFind the elixir before your health gets to 0 to save CC!");
   }
 }
