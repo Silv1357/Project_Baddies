@@ -6,8 +6,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-//this button class serves to create the buttons on the map as well as get the button the user clicked on and based on the button
-//it will print a window with 2 options from which the player must choose from and based on that they will either get a window wiht a clue or get health deducted
+// this button class serves to create the buttons on the map as well as get the button the user clicks on and based on the button
+// it will print a window with 2 options from which the player must choose from and based on that they will either get a window wiht a clue or get health deducted
 
 public class Button extends JButton implements ActionListener{
   JButton sports, languageHouses, westCampus, worner, musicAndTheatre, tuttLibrary, armstrong, southHall, edRobson, shove, classes, mathias, eastCampus;
@@ -27,6 +27,7 @@ public class Button extends JButton implements ActionListener{
   RabidSquirrel classesSquirrel = new RabidSquirrel();
   RabidSquirrel eastCampusSquirrel = new RabidSquirrel();
 
+  // method for creating buttons and displaing on panel
   public void button(){
     // create a JFrame
     JFrame a = new JFrame();
@@ -50,7 +51,7 @@ public class Button extends JButton implements ActionListener{
     a.add(label); // add label (image) to frame
     a.setVisible (true);
 
-    // Athletics and Sports Button
+    // Athletics and Sports 
     sports = new JButton ("Sports");
     sports.setBounds (30, 200, 100, 25);
     a.add(sports);
@@ -58,7 +59,7 @@ public class Button extends JButton implements ActionListener{
     a.setVisible(true);
     sports.addActionListener(this);
 
-    // Language House Button
+    // Language Houses
     languageHouses = new JButton ("Language Houses");
     languageHouses.setBounds (200, 20, 150, 25);
     a.add(languageHouses);
@@ -66,7 +67,7 @@ public class Button extends JButton implements ActionListener{
     a.setVisible(true);
     languageHouses.addActionListener(this);
 
-    // West Campus Button
+    // West Campus 
     westCampus = new JButton ("West Campus");
     westCampus.setBounds (150, 175, 120, 25);
     a.add (westCampus);
